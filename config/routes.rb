@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'home/show'
 
+  patch 'switch-view/:view_style' => 'home#switch_view', as: :switch_view
+
   devise_for :users
 
   resources :users
@@ -12,7 +14,8 @@ Rails.application.routes.draw do
 # Adding resources for Items Controller
   resources :items do
   	member do
-  	patch :complete
+    patch :complete
+  	patch :uncomplete
   end
 end
 

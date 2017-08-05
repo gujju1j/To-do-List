@@ -31,7 +31,12 @@
   </ul>
 
   <% if user_signed_in? %>
-  <%= link_to "New Task", new_item_path, class: "navbar-text navbar-link navbar-right" %>
+    <%= link_to "New Task", new_item_path, class: "navbar-text navbar-link navbar-right" %>
+
+    <div class="btn-group navbar-right" role="group" aria-label="...">
+      <%= link_to '', switch_view_path('title'), method: :patch, class: "btn btn-default glyphicon glyphicon-menu-hamburger #{ 'active' if session[:view_style] == 'title'}", title: 'Title-only view' %>
+      <%= link_to '', switch_view_path('title-with-details'), method: :patch, class: "btn btn-default glyphicon glyphicon-th-list #{ 'active' if session[:view_style] == 'title-with-details'}", title: 'Title-and-details view' %>
+    </div>
   <% end %>
   </div>
   </nav>

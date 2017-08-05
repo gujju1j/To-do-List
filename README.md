@@ -1,5 +1,7 @@
 # README
 
+This is a simple Todo List Management application.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
