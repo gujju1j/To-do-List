@@ -5,13 +5,13 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# bundle simple_form is used to create user create edit form
+# bundle simple_form is used to create user create edit form 
 gem 'simple_form', '~> 3.5'
 # to have good css styling using bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
-# To make user sign up authentication
+# To make user sign up authentication 
 gem 'devise', '~> 4.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -26,7 +26,6 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
-gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
