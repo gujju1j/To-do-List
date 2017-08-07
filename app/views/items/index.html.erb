@@ -22,11 +22,9 @@
 		</div>
 
 		<div class="col-md-1">
-			<p>
-			<%= link_to uncomplete_item_path(item), method: :patch do %></p>
+			<p><%= link_to uncomplete_item_path(item), method: :patch do %></p>
 				<i class="fa fa-lg fa-check"></i>
 			<% end %>
-			
 		</div>
 
 
@@ -41,7 +39,7 @@
 
 	<div class="row item">
 		<div class="col-md-6">
-			<h2 class="item-title"><%= link_to item.title, item.blank? %></h2>
+			<h2 class="item-title"><%= link_to item.title, item %></h2>
 			<% if session[:view_style] && session[:view_style] == 'title-with-details' %>
 				<p class="item-desc item-sub-title"><%= item.description %></p>
 				<p class="time-ago item-sub-title">Created <%= time_ago_in_words(item.created_at) %> ago </p>

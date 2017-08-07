@@ -4,6 +4,8 @@
 		<p><%= @item.description %></p>
 
 		<%= link_to "Back", root_path, class: "btn btn-primary" %>
-		<%= link_to "Edit", edit_item_path(@item), class: "btn btn-primary" %>
+    <% unless @item.completed? %>
+  		<%= link_to "Edit", edit_item_path(@item), class: "btn btn-primary" %>
+    <% end %>
 
 </div>
